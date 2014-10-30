@@ -1,0 +1,18 @@
+#!/bin/bash
+
+REALPATH=`readlink $0`
+DIR=`dirname $REALPATH`
+
+env NODE_NO_READLINE=1 \
+    RLWRAP_FILTERDIR="$DIR/filters" \
+    rlwrap \
+    --always-readline \
+    -p Green \
+    -S "| ?- " \
+    --complete-filenames \
+    --histsize=1000 \
+    --logfile="$HOME/.prism_log" \
+    --break-chars="(){}[],\'+−=&^%$#@\";" \
+    --file="$DIR/resources/bprolog_completions.txt" \
+    -z "prism_repl_filter" \
+    prism

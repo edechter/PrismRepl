@@ -1,0 +1,19 @@
+README 
+
+PrismRepl
+------------------------------------------------
+Author: Eyal Dechter (eyaldechter@gmail.com)
+
+Using rlwrap we add sane tab completion and history to PRISM repl. 
+
+Usage: prism_repl 
+
+Contents:
+------------------------------------------------
+prism_repl      ... main shell script
+resources/      ... completions lists and text useful for smart completion
+filters/        ... rlwrap filters 
+
+Install:
+-------------------------------------------------
+

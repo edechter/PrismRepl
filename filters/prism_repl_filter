@@ -1,0 +1,33 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+use lib $ENV{RLWRAP_FILTERDIR};
+use RlwrapFilter;
+
+# bprolog manual in text format
+# my $bp_manual = "bpmanual.txt";
+
+# open(FILE, $bp_manual) or die("could not find file $bp_manual");
+# while (<FILE>) {
+#     my $match = ($_ =~ /read term/); 
+#     print if defined $match;
+# }
+
+# print "hello"; 
+my $filter = new RlwrapFilter;
+# $filter -> completion_handler( 
+    # sub{ 
+        # $_[0];
+    # });
+# print $filter -> name;
+$filter -> prompts_are_never_empty(1);
+$filter -> run;
+
+# $filter −> output_handler(sub {s/apple/orange/; $_}); # re−write output
+# $filter −> prompt_handler(\&pimp_the_prompt); # change prompt
+
+# $filter −> history_handler(sub {s/with password \w+/with password ****/; $_}); # keep passwords out of history
+# $filter −> run;
+
+# print "hello";
