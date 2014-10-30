@@ -16,4 +16,6 @@ filters/        ... rlwrap filters
 
 Install:
 -------------------------------------------------
+Edit Makefile to set destination of executable and data.
 
+>>> make install
