@@ -7,6 +7,7 @@ env NODE_NO_READLINE=1 \
     RLWRAP_FILTERDIR="$DIR/filters" \
     rlwrap \
     --always-readline \
+    -t dumb \
     -p Green \
     -S "| ?- " \
     --complete-filenames \
@@ -14,5 +15,6 @@ env NODE_NO_READLINE=1 \
     --logfile="$HOME/.prism_log" \
     --break-chars="(){}[],\'+−=&^%$#@\";" \
     --file="$DIR/resources/bprolog_completions.txt" \
+    --file="$DIR/resources/prism_completions.txt" \
     -z "prism_repl_filter" \
     prism
